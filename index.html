@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Something For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hearts"></div>
+  <button id="musicBtn">🎵 Music</button>
+
+  <section class="page active" id="page1">
+    <div class="card">
+      <div class="big-heart">💌</div>
+      <p class="mini">I made something special for you...</p>
+      <h1>Hey <span class="name">Beautiful</span> ❤️</h1>
+      <p>There is something I've been wanting to ask you.</p>
+      <button class="primary" onclick="nextPage(2)">Open This 💕</button>
+    </div>
+  </section>
+
+  <section class="page" id="page2">
+    <div class="card">
+      <div class="big-heart">🌹</div>
+      <h1>Before I Ask...</h1>
+      <p class="message">I don't know if you'll expect this, but I wanted to ask you in a slightly different way.
+      <br><br>So... here goes nothing. 🥹❤️</p>
+      <button class="primary" onclick="nextPage(3)">Continue ✨</button>
+    </div>
+  </section>
+
+  <section class="page" id="page3">
+    <div class="card">
+      <div class="big-heart">🥰</div>
+      <h1>One Little Question...</h1>
+      <p class="question">Would you want to go on a date with me?</p>
+      <div class="buttons">
+        <button class="yes" onclick="answerYes()">YES ❤️</button>
+        <button class="no" id="noBtn">NO 🙈</button>
+      </div>
+      <p class="hint">Choose carefully... 👀</p>
+    </div>
+  </section>
+
+  <section class="page" id="page4">
+    <div class="card wide">
+      <div class="big-heart">🎉</div>
+      <h1>YAY!!! ❤️</h1>
+      <p class="question">I knew you'd say yes! 🥹</p>
+      <p>Now comes the important question...<br><strong>What kind of date would you like?</strong></p>
+
+      <div class="date-options">
+        <button onclick="chooseDate('Romantic Dinner')">🌹<span>Romantic Dinner</span><small>Candlelight & good food</small></button>
+        <button onclick="chooseDate('Coffee & Conversations')">☕<span>Coffee & Conversations</span><small>Just you, me & endless talking</small></button>
+        <button onclick="chooseDate('Movie Date')">🎬<span>Movie Date</span><small>Movie + popcorn + vibes</small></button>
+        <button onclick="chooseDate('Sunset Date')">🌅<span>Sunset Date</span><small>Beautiful evening together</small></button>
+        <button onclick="chooseDate('Fun & Games')">🎮<span>Fun & Games</span><small>A little friendly competition 😏</small></button>
+        <button onclick="chooseDate('Outdoor Date')">🌳<span>Outdoor Date</span><small>Walk, snacks & peaceful vibes</small></button>
+        <button onclick="chooseDate('Surprise Me')">✨<span>Surprise Me</span><small>You choose, I'll plan ❤️</small></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page5">
+    <div class="card">
+      <div class="big-heart">📅</div>
+      <h1>When Are You Free?</h1>
+      <p>Pick a day that works for you ❤️</p>
+      <input type="date" id="dateInput"><br><br>
+      <input type="time" id="timeInput"><br><br>
+      <button class="primary" onclick="finishDate()">Confirm Our Date 💖</button>
+    </div>
+  </section>
+
+  <section class="page" id="page6">
+    <div class="card">
+      <div class="big-heart">💖</div>
+      <h1>It's A Date! 🥰</h1>
+      <p class="finalText">I can't wait to see you ❤️</p>
+      <div class="summary">
+        <p>🌹 <strong>Type:</strong> <span id="selectedType"></span></p>
+        <p>📅 <strong>Date:</strong> <span id="selectedDate"></span></p>
+        <p>⏰ <strong>Time:</strong> <span id="selectedTime"></span></p>
+      </div>
+      <p class="small">See you soon, beautiful. ❤️</p>
+    </div>
+  </section>
+
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
