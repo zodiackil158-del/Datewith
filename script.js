@@ -1,5 +1,5 @@
 // Replace this after you deploy the backend.
-const BACKEND_URL = "http://localhost:3000/api/response";
+const BACKEND_URL = "https://datewith.onrender.com/api/response";
 
 let selectedDateType = "";
 const music = document.getElementById("music");
