@@ -29,8 +29,9 @@ app.post("/api/response",(req,res)=>{
     details:req.body.details || {},
     time:req.body.time || new Date().toISOString()
   };
-  save(record);
-  res.json({ok:true});
+ save(record);
+console.log("❤️ DATE RESPONSE:", JSON.stringify(record));
+res.json({ok:true});
 });
 
 // Basic private-ish dashboard. Protect this with a real auth system before public use.
